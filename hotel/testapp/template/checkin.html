@@ -1,0 +1,39 @@
+<form action="" name="emplist" id="emplist" enctype="multipart/form-data" method="POST">
+  {% csrf_token %}
+      <h3>Check inn Details</h3>
+
+          <label for="name">Name<span style="color:red;">*</span></label>
+          <input type="text" class="form-control" name="name" id="name" value=""><br>
+<br>
+          <label for="address">Address<span style="color:red;">*</span></label>
+          <input type="text" class="form-control" name="address" id="address" value=""><br>
+<br>
+          <label for="mobileno">Mobile Number<span style="color:red;">*</span></label>
+          <input type="text" class="form-control" name="mobileno" id="mobileno" value="" required><br>
+<br>
+          <label for="noofdays">Number of Days<span style="color:red;">*</span></label>
+          <input type="number" class="form-control" name="noofdays" id="noofdays" value="" required><br>
+<br>
+          <label for="choose_type">Choose Room<span style="color:red;">*</span></label>
+          <select name="choose_type" id="choose_type"  required>
+            <option value="" disabled selected hidden>Choose</option><br>
+            <option value="">Select</option>
+            <option value="1">Deluxe</option>
+            <option value="2">Full Deluxe</option>
+            <option value="3">General</option>
+          </select><br>
+<br>
+          <label for="payment_method">Choose Payment Method<span style="color:red;">*</span></label>
+          <select name="payment_method" id="payment_method"  required><br><br>
+            <option value="" disabled selected hidden>Select Gender</option>
+            <option value="">Select</option>
+            <option value="1">By Cash</option>
+            <option value="2">By Credit/Debit card</option>
+          </select><br>
+<br>
+          <a href="/checkin/">
+          <button type="button" class="btn btn-primary pull-right">
+            Check inn <i class="fa fa-angle-right"></i><i class="fa fa-angle-right"></i>
+          </button>
+          <a>
+</form>

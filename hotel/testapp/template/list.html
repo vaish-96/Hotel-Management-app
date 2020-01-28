@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table border="1">
+      <thead>
+        <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Mobile Number</th>
+        <th>No of days</th>
+        <th>Choose Type</th>
+        <th>Payment Method</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for job in guests %}
+        <tr>
+        <td>{{ job.name }}</td>
+        <td>{{ job.address }}</td>
+        <td>{{ job.mobileno }}</td>
+        <td>{{ job.noofdays }}</td>
+        <td>{{ job.choose_type }}</td>
+        <td>{{ job.payment_method }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p><a href="{% url 'testapp:index' %}">Back</a></p>
+  </body>
+</html>
